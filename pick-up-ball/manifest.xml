@@ -1,19 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="pick-up-ball-251cac" version="0.0.0" installOnlyAtStartup="false">
+<package uuid="pick-up-ball-251cac" installOnlyAtStartup="false" version="0.0.0">
  <names>
   <name lang="en_US">Untitled</name>
  </names>
  <supportedLanguages>
   <language>en_US</language>
+  <language>de_DE</language>
  </supportedLanguages>
  <descriptionLanguages>
   <language>en_US</language>
+  <language>de_DE</language>
  </descriptionLanguages>
  <contents>
   <behaviorContent path="behavior_1">
    <userRequestable/>
    <nature>interactive</nature>
-   <autonomous/>
    <permissions/>
   </behaviorContent>
  </contents>
