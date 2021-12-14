@@ -216,7 +216,11 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="3" />
             </Box>
+<<<<<<< HEAD
             <Box name="Stand Up" id="2" localization="8" tooltip="the robot tries to stand up from any position for a number of tries.&#x0A;&#x0A;Note: The number of tries can be set in parameters." x="151" y="501">
+=======
+            <Box name="Stand Up" id="2" localization="8" tooltip="the robot tries to stand up from any position for a number of tries.&#x0A;&#x0A;Note: The number of tries can be set in parameters." x="480" y="361">
+>>>>>>> 1387d3fd779145827094dd5a2ffe93d2d952de7d
               <bitmap>media/images/box/movement/stand.png</bitmap>
               <script language="4">
                 <content>
@@ -295,6 +299,10 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="All motors" type="Lock" timeout="0" />
             </Box>
+<<<<<<< HEAD
+=======
+            <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
+>>>>>>> 1387d3fd779145827094dd5a2ffe93d2d952de7d
             <Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="3" />
             <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
           </Diagram>
