@@ -15,7 +15,7 @@
       <BehaviorLayer name="behavior_layer1">
         <BehaviorKeyframe name="keyframe1" index="1">
           <Diagram>
-            <Box name="test" id="2" localization="8" tooltip="" x="520" y="251">
+            <Box name="test" id="2" localization="8" tooltip="" x="393" y="175">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -187,7 +187,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="test (1)" id="3" localization="8" tooltip="" x="647" y="252">
+            <Box name="test (1)" id="3" localization="8" tooltip="" x="520" y="176">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -441,7 +441,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="kick (first attempt)" id="4" localization="8" tooltip="" x="394" y="358">
+            <Box name="kick (first attempt)" id="4" localization="8" tooltip="" x="267" y="282">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -795,7 +795,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="tl" id="6" localization="8" tooltip="" x="394" y="252">
+            <Box name="tl" id="6" localization="8" tooltip="" x="267" y="176">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -808,7 +808,7 @@
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
               <Timeline enable="1" fps="25" start_frame="1" end_frame="-1" size="-1" />
             </Box>
-            <Box name="kick lower position" id="7" localization="8" tooltip="" x="523" y="66">
+            <Box name="kick lower position" id="7" localization="8" tooltip="" x="472" y="59">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -1240,7 +1240,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="kick with higher position" id="8" localization="8" tooltip="" x="518" y="356">
+            <Box name="kick with higher position" id="8" localization="8" tooltip="" x="391" y="280">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -1542,7 +1542,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="kick lower position (1)" id="9" localization="8" tooltip="" x="650" y="359">
+            <Box name="kick lower position (1)" id="9" localization="8" tooltip="" x="523" y="283">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -1922,7 +1922,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="kick lower position with rotation" id="1" localization="8" tooltip="Unwanted rotation at the end when Nao wants to stand up" x="776" y="362">
+            <Box name="kick lower position with rotation" id="1" localization="8" tooltip="Unwanted rotation at the end when Nao wants to stand up" x="649" y="286">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -2276,7 +2276,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="kick lower position (3)" id="10" localization="8" tooltip="no rotation, but very unstable or falls during the putting the right leg down" x="906" y="363">
+            <Box name="kick lower position (3)" id="10" localization="8" tooltip="no rotation, but very unstable or falls during the putting the right leg down" x="779" y="287">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
