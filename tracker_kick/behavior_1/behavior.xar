@@ -702,7 +702,7 @@ class MyClass(GeneratedClass):
                 <Choice value="WholeBody" />
                 <Choice value="Move" />
               </Parameter>
-              <Parameter name="Effector" inherits_from_parent="0" content_type="3" value="RArm" default_value="None" custom_choice="0" tooltip="Set effector to use for tracking. Head is always used." id="6">
+              <Parameter name="Effector" inherits_from_parent="0" content_type="3" value="None" default_value="None" custom_choice="0" tooltip="Set effector to use for tracking. Head is always used." id="6">
                 <Choice value="None" />
                 <Choice value="Arms" />
                 <Choice value="LArm" />
