@@ -485,7 +485,6 @@ class MyClass(GeneratedClass):
 
         if self.isRunning:
             self.tracker.setEffector("None")
-            #self.tracker.stopTracker()
             self.tracker.unregisterTarget(self.targetName)
             self.isRunning = False
 
@@ -568,12 +567,9 @@ class MyClass(GeneratedClass):
         self.logger.info("Start tracking: " + str(startTime))
 
         while(atBall==False):
-            #if not self.isRunning:
-            #    self.tracker.stopTracker()
 
             time.sleep(0.1)
 
-            ###### TODO
             x = 0
             y = 0
             if self.tracker.getTargetPosition():
@@ -581,14 +577,7 @@ class MyClass(GeneratedClass):
                     x = self.tracker.getTargetPosition()[0]
                     y = self.tracker.getTargetPosition()[1]
                     self.distance = math.sqrt(math.pow(x,2)+math.pow(y,2))
-                    #angle = math.atan2(y, x)
-                    #angleRounded = int(angle/(5.0*motion.TO_RAD))*(5.0*motion.TO_RAD)
-                    #The walking velocity angle must be between -1 and 1
-                    #if(angleRounded>1):
-                    #    angleRounded = 1
-                    #if(angleRounded<-1):
-                    #    angleRounded = -1
-                    self.logger.info("Ball at: x=" + str(x) + ", y=" + str(y)) # + " with " + str(angleRounded) + " in " + str(self.distance))
+                    self.logger.info("Ball at: x=" + str(x) + ", y=" + str(y))
                 except IndexError:
                     self.logger.info("onInput_onStart IndexError: list index out of range")
                     continue
@@ -603,23 +592,20 @@ class MyClass(GeneratedClass):
 
             #If we lost sight of the ball a certain amount
             if(ballLost >= 5):
-                self.logger.info("####### ball is LOST  #######")
+                self.logger.info("####### Ball is LOST  #######")
                 atBall = True
-                #self.motion.stopMove()
-                #self.tracker.stopTracker()
                 self.reached_or_lost = "lost"
 
             #If we reached our target distance
             if(self.distanceToTarget-0.02 <= self.distance <= self.distanceToTarget+0.02):
                 self.logger.info("At my Target")
                 atBall = True
-                #self.motion.stopMove()
                 self.reached_or_lost = "reached"
 
-#            if(self.distance > 0.2 and atBall == True):
-#                atBall = False
-#                self.tracker.stopTracker()
-#                self.tracker.track(self.targetName)
+            if(self.distance > 0.2 and atBall == True):
+                atBall = False
+                self.tracker.stopTracker()
+                self.tracker.track(self.targetName)
 
         self.tracker.stopTracker()
         self.logger.info("End of function; " + self.reached_or_lost)
@@ -1250,10 +1236,10 @@ class MyClass(GeneratedClass):
             <Link inputowner="9" indexofinput="2" outputowner="2" indexofoutput="4" />
             <Link inputowner="3" indexofinput="2" outputowner="9" indexofoutput="3" />
             <Link inputowner="4" indexofinput="2" outputowner="9" indexofoutput="4" />
-            <Link inputowner="7" indexofinput="2" outputowner="3" indexofoutput="3" />
-            <Link inputowner="0" indexofinput="4" outputowner="7" indexofoutput="3" />
             <Link inputowner="0" indexofinput="4" outputowner="4" indexofoutput="3" />
             <Link inputowner="2" indexofinput="3" outputowner="0" indexofoutput="2" />
+            <Link inputowner="12" indexofinput="2" outputowner="3" indexofoutput="3" />
+            <Link inputowner="0" indexofinput="4" outputowner="12" indexofoutput="4" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>
