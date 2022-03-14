@@ -15,7 +15,7 @@
       <BehaviorLayer name="behavior_layer1">
         <BehaviorKeyframe name="keyframe1" index="1">
           <Diagram>
-            <Box name="kick lower position" id="7" localization="8" tooltip="" x="905" y="144">
+            <Box name="kick" id="7" localization="8" tooltip="" x="714" y="160">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -25,7 +25,7 @@
               <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
               <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="3" />
-              <Timeline enable="1" fps="25" start_frame="1" end_frame="261" size="261">
+              <Timeline enable="1" fps="25" start_frame="1" end_frame="261" size="314">
                 <ActuatorList model="">
                   <ActuatorCurve name="value" actuator="HeadPitch" mute="0" unit="0">
                     <Key frame="1" value="0.387102" />
@@ -42,6 +42,7 @@
                     <Key frame="220" value="1.57965" />
                     <Key frame="236" value="0.964409" />
                     <Key frame="256" value="0.43705" />
+                    <Key frame="314" value="29.5" />
                   </ActuatorCurve>
                   <ActuatorCurve name="value" actuator="HeadYaw" mute="0" unit="0">
                     <Key frame="1" value="-0.63015" />
@@ -58,6 +59,7 @@
                     <Key frame="220" value="-0.441859" />
                     <Key frame="236" value="-0.00240423" />
                     <Key frame="256" value="1.49175" />
+                    <Key frame="314" value="-8.3" />
                   </ActuatorCurve>
                   <ActuatorCurve name="value" actuator="LAnklePitch" mute="0" unit="0">
                     <Key frame="1" value="4.02797" />
@@ -446,7 +448,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Red Ball Tracker" id="9" localization="-1" tooltip="This box makes the robot track a red ball with different modes." x="416" y="497">
+            <Box name="Red Ball Tracker" id="9" localization="-1" tooltip="This box makes the robot track a red ball with different modes." x="321" y="368">
               <bitmap>media/images/box/tracker/tracker.png</bitmap>
               <script language="4">
                 <content>
@@ -702,7 +704,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Theta (rad)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-3.14" max="3.14" tooltip="Wz angle of the vector robot-target the robot will try to maintain in move modes." id="12" />
               <Parameter name="Threshold Theta (rad)" inherits_from_parent="0" content_type="2" value="0" default_value="0.3" min="0" max="3.14" tooltip="Threshold of the angle of the vector robot-target above which the robot will move to track its target in move modes." id="13" />
             </Box>
-            <Box name="Select Camera" id="2" localization="8" tooltip="Change the currently used camera." x="240" y="166">
+            <Box name="Select Camera" id="2" localization="8" tooltip="Change the currently used camera." x="158" y="204">
               <bitmap>media/images/box/interaction/look.png</bitmap>
               <script language="4">
                 <content>
@@ -741,7 +743,7 @@ class MyClass(GeneratedClass):
               <Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="The camera change is done." id="4" />
               <Resource name="Camera setting" type="Lock" timeout="0" />
             </Box>
-            <Box name="Ball found" id="3" localization="8" tooltip="Say some text. The text can be localized." x="596" y="161">
+            <Box name="Ball found" id="3" localization="8" tooltip="Say some text. The text can be localized." x="442" y="124">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -797,7 +799,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="ball found" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Ball not found" id="4" localization="8" tooltip="Say some text. The text can be localized." x="880" y="503">
+            <Box name="Ball not found" id="4" localization="8" tooltip="Say some text. The text can be localized." x="735" y="368">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -853,7 +855,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="No ball" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="pick up" id="12" localization="8" tooltip="This works so far the best." x="909" y="282">
+            <Box name="pick up" id="12" localization="8" tooltip="This works so far the best." x="790" y="51">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -1233,7 +1235,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Move To" id="5" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="755" y="289">
+            <Box name="Move To" id="5" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="619" y="48">
               <bitmap>media/images/box/movement/walk_forward.png</bitmap>
               <script language="4">
                 <content>

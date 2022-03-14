@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="tracker_kick_pickup-901d04" version="0.0.0" installOnlyAtStartup="false">
+<package version="0.0.0" installOnlyAtStartup="false" uuid="tracker_kick_pickup-901d04">
  <names>
   <name lang="en_US">Untitled</name>
  </names>
