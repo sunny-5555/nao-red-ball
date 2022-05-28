@@ -1,4 +1,4 @@
-# Student project: NAO Red Ball Tracker, Kick, Pick Up
+# Student project: NAO, Red Ball Tracker, Kick, Pick Up
 Student project at Esslingen University of Applied Sciences (Hochschule Esslingen)
 
 ## GDC
