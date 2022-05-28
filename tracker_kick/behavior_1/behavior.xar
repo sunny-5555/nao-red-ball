@@ -446,7 +446,7 @@
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Red Ball Tracker" id="9" localization="-1" tooltip="This box makes the robot track a red ball with different modes." x="373" y="227">
+            <Box name="Red Ball Tracker" id="9" localization="-1" tooltip="This box makes the robot track a red ball with different modes." x="365" y="365">
               <bitmap>media/images/box/tracker/tracker.png</bitmap>
               <script language="4">
                 <content>
@@ -811,7 +811,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="ball found" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Ball not found" id="4" localization="8" tooltip="Say some text. The text can be localized." x="642" y="230">
+            <Box name="Ball not found" id="4" localization="8" tooltip="Say some text. The text can be localized." x="782" y="365">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
