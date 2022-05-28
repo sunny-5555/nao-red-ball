@@ -14,8 +14,8 @@
     <Timeline enable="0">
       <BehaviorLayer name="behavior_layer1">
         <BehaviorKeyframe name="keyframe1" index="1">
-          <Diagram>
-            <Box name="kick lower position" id="7" localization="8" tooltip="" x="905" y="144">
+          <Diagram scale="70.7107">
+            <Box name="kick lower position" id="7" localization="8" tooltip="" x="849" y="296">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -450,7 +450,13 @@
               <bitmap>media/images/box/tracker/tracker.png</bitmap>
               <script language="4">
                 <content>
-                  <![CDATA[import time
+                  <![CDATA[## Created by Softbank Robotics
+## Modified by Jasmin Saleh and Sungeeta Singh
+## Last modification
+##    Date: 28.05.2022
+##    Description: Comments added
+
+import time
 import math
 
 class MyClass(GeneratedClass):
@@ -488,6 +494,7 @@ class MyClass(GeneratedClass):
             self.tracker.unregisterTarget(self.targetName)
             self.isRunning = False
 
+    # Source: https://github.com/thanh118/NAO-Robot-Soccer/blob/master/src/NAO_controller.py
     def getTimeBallData(self):
         ###
         # Summary: this method will indicate if we have information in that moment about the
@@ -504,6 +511,7 @@ class MyClass(GeneratedClass):
         else:
             return 0
 
+    # Source: https://github.com/thanh118/NAO-Robot-Soccer/blob/master/src/NAO_controller.py
     def isNewBall(self):
         ###
         # Summary: indicate if Nao found the ball again after missing it
@@ -560,6 +568,8 @@ class MyClass(GeneratedClass):
         self.isRunning = True
         self.distanceToTarget = math.sqrt(math.pow(self.distanceX,2)+math.pow(self.distanceY,2))
 
+        # Source: https://github.com/thanh118/NAO-Robot-Soccer/blob/master/src/NAO_controller.py
+        # The authors of this project made several necessary modifications.
         ballLost = 0
         atBall = False
         self.tracker.track(self.targetName)
@@ -579,7 +589,7 @@ class MyClass(GeneratedClass):
                     self.distance = math.sqrt(math.pow(x,2)+math.pow(y,2))
                     self.logger.info("Ball at: x=" + str(x) + ", y=" + str(y))
                 except IndexError:
-                    self.logger.info("onInput_onStart IndexError: list index out of range")
+                    self.logger.info("onInput_onStart IndexError: list index out of range. No Traget Position Data")
                     continue
 
 
@@ -590,18 +600,22 @@ class MyClass(GeneratedClass):
                 ballLost = 0
                 self.logger.info("####### New Ball is found #######")
 
-            #If we lost sight of the ball a certain amount
+            # Check if we lost sight of the ball for more than 5 times
             if(ballLost >= 5):
                 self.logger.info("####### Ball is LOST  #######")
                 atBall = True
                 self.reached_or_lost = "lost"
 
-            #If we reached our target distance
-            if(self.distanceToTarget-0.02 <= self.distance <= self.distanceToTarget+0.02):
+            # Check if we reached our target distance with a given tolerance (+/- 0.015 m)
+            if(self.distanceToTarget-0.015 <= self.distance <= self.distanceToTarget+0.015):
                 self.logger.info("At my Target")
                 atBall = True
                 self.reached_or_lost = "reached"
 
+## Following code is commented because the distance is calculated unreliable.
+## In reality the NAO robot at the ball, which is why it is unnecessary to
+## start the tracker again
+#            # Restart tracker
 #            if(self.distance > 0.2 and atBall == True):
 #                atBall = False
 #                self.tracker.stopTracker()
@@ -853,7 +867,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="No ball" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="pick up" id="12" localization="8" tooltip="This works so far the best." x="909" y="282">
+            <Box name="pick up" id="12" localization="8" tooltip="This works so far the best." x="923" y="147">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -1233,7 +1247,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Move To" id="5" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="755" y="289">
+            <Box name="Move To" id="5" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="772" y="145">
               <bitmap>media/images/box/movement/walk_forward.png</bitmap>
               <script language="4">
                 <content>
@@ -1297,10 +1311,8 @@ class MyClass(GeneratedClass):
             <Link inputowner="0" indexofinput="4" outputowner="4" indexofoutput="3" />
             <Link inputowner="0" indexofinput="4" outputowner="12" indexofoutput="4" />
             <Link inputowner="12" indexofinput="2" outputowner="5" indexofoutput="4" />
-            <Link inputowner="12" indexofinput="2" outputowner="5" indexofoutput="5" />
             <Link inputowner="5" indexofinput="2" outputowner="3" indexofoutput="3" />
-            <Link inputowner="7" indexofinput="2" outputowner="0" indexofoutput="2" />
-            <Link inputowner="0" indexofinput="4" outputowner="7" indexofoutput="3" />
+            <Link inputowner="2" indexofinput="3" outputowner="0" indexofoutput="2" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>
