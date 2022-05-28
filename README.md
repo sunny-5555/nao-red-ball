@@ -21,13 +21,12 @@ https://user-images.githubusercontent.com/83015830/170839124-4a738929-da64-4e57-
 
 ### NAO finds the red ball and kicks it
 
-
 https://user-images.githubusercontent.com/83015830/170840018-cd408aa4-77c3-4eb4-a70a-eec4141b5054.mp4
 
 
 
-\newline
-\newline
+\
+\
 
 
 ##### The documentation of this student project is written in German.
