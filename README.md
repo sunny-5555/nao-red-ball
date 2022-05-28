@@ -26,7 +26,8 @@ https://user-images.githubusercontent.com/83015830/170840018-cd408aa4-77c3-4eb4-
 
 
 
+\newline
+\newline
 
 
-
-##### The documentation of this student project is in German.
+##### The documentation of this student project is written in German.
